@@ -30,6 +30,7 @@ class Snake:
 
 
     def change_direction(self, x_vel, y_vel):
+        #block excessive movement and prevent reversing (which would be instant death)
         if abs(x_vel) == 1 and abs(self.x_vel) != abs(x_vel):
             self.x_vel = x_vel
             self.y_vel = 0
@@ -39,6 +40,7 @@ class Snake:
 
 
     def coords_to_rect(self, x, y):
+        #we leave a small gap between squares for visibility
         return self.rect_coords(x+1, y+1, self.thickness-1, self.thickness-1)
     
     def rect_coords(self, x, y, w, h):

@@ -1,6 +1,6 @@
 import pyglet
 from pyglet.window import key
-from pyglet.gl import *
+from pyglet.gl import glClearColor
 from Snake import Snake
 
 class SnakeGameWindow(pyglet.window.Window):
